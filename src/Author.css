@@ -1,0 +1,12 @@
+.Author #author {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+
+.Author #author a {
+  color: #56b5e9;
+  font-weight: 400;
+}
