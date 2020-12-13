@@ -4,7 +4,6 @@ import "./Weather.css";
 import "./Search.css";
 import City from "./City";
 import MyDate from "./MyDate";
-//import WeatherInfo from "./WeatherInfo";
 import Current from "./Current";
 import Forecast from "./Forecast";
 

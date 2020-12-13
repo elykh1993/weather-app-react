@@ -1,12 +1,12 @@
-.Author #author {
+.Author {
   margin: 0 auto;
   display: block;
   text-align: center;
   position: relative;
-  top: 80px;
+  top: -80px;
 }
 
-.Author #author a {
+.Author a {
   color: #56b5e9;
   font-weight: 400;
 }

@@ -2,7 +2,7 @@ import FormatDate from "./FormatDate";
 
 export default function MyDate(props) {
   return (
-    <div className="Date">
+    <div className="MyDate">
       <h4>
         <FormatDate date={props.data.date} />
       </h4>
