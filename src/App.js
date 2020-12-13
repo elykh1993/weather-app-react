@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Author from "./Author";
 import Weather from "./Weather";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./Weather.css";
-// import Search from "./Search";
-// import City from "./City";
+import Search from "./Search";
+import City from "./City";
 import MyDate from "./MyDate";
-// import WeatherInfo from "./WeatherInfo";
-// import Current from "./Current";
-// import Forecast from "./Forecast";
-// import Author from "./Author";
+//import WeatherInfo from "./WeatherInfo";
+import Current from "./Current";
+import Forecast from "./Forecast";
 
 function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -30,12 +29,11 @@ function Weather(props) {
     return (
       <div className="Weather">
         <div className="container">
-          {/* <Search />
-          <City /> */}
+          <Search />
+          <City />
           <MyDate data={weatherData} />
-          {/* <Date data={weatherData} /> */}
-          {/* <Current />
-          <Forecast /> */}
+          <Current />
+          <Forecast />
         </div>
       </div>
     );

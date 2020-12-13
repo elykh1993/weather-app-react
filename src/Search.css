@@ -1,0 +1,16 @@
+.Search .form-inline {
+  margin-top: 20px;
+}
+.Search .form-control-sm {
+  border-width: thin;
+  border: #e4e3e3;
+}
+.Search .btn-primary {
+  margin-left: 10px;
+  background: #10375c;
+  border: #10375c;
+}
+.Search .btn-primary:hover {
+  background-color: #e4e3e3;
+  color: #10375c;
+}
