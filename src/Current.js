@@ -18,13 +18,14 @@ export default function Current(props) {
                 <WeatherIcon code={props.data.icon} />
                 <span className="temp-display">{current.temp}°F</span>
               </li>
-              <li className="Change-temp">
-                <a href="/" className="Farenheit">
+              <li className="change-temp">
+                <a href="/" className="farenheit">
                   {" "}
                   °F{" "}
                 </a>{" "}
                 |
-                <a href="/" className="Celsius">
+                <a href="/" className="celsius">
+                  {" "}
                   °C
                 </a>
               </li>
@@ -33,13 +34,13 @@ export default function Current(props) {
         </div>
         <div className="col-6">
           <ul className="current-details">
-            <li className="current-description">{current.description} 🌥</li>
+            <li className="current-description">{props.data.description} </li>
             <li>
               Humidity{" "}
-              <span className="current-humidity">{current.humidity}</span>%
+              <span className="current-humidity">{props.data.humidity}</span>%
             </li>
             <li>
-              Wind <span className="current-wind">{current.wind}mph</span>
+              Wind <span className="current-wind">{props.data.wind}mph</span>
             </li>
           </ul>
         </div>
