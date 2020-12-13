@@ -1,7 +1,9 @@
-export default function City() {
+import "./City.css";
+
+export default function City(props) {
   return (
     <div className="City">
-      <h1 id="city-name">Watertown</h1>
+      <h1>{props.data.city}</h1>
     </div>
   );
 }

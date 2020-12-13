@@ -1,7 +1,7 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Author from "./Author";
 import Weather from "./Weather";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

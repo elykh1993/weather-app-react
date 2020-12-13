@@ -13,10 +13,3 @@
 .Weather a {
   color: #10375c;
 }
-.App .container {
-  height: 500px;
-  width: 800px;
-  margin: 100px auto;
-  border-radius: 10px;
-  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-}
