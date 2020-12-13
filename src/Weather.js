@@ -22,7 +22,7 @@ function Weather(props) {
       city: response.data.name,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
-      //icon:
+      icon: response.data.weather[0].icon,
     });
   }
 

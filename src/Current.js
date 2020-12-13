@@ -1,5 +1,7 @@
 import "./Current.css";
-export default function Current() {
+import WeatherIcon from "./WeatherIcon";
+
+export default function Current(props) {
   let current = {
     temp: 75,
     description: "Mostly Cloudy",
@@ -11,22 +13,18 @@ export default function Current() {
       <div className="row current">
         <div className="col-6">
           <div className="current-temp">
-            <ul id="current-list">
+            <ul className="current-list">
               <li>
-                <img
-                  id="current-icon"
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="sun"
-                />
-                <span id="temp-display">{current.temp}°F</span>
+                <WeatherIcon code={props.data.icon} />
+                <span className="temp-display">{current.temp}°F</span>
               </li>
-              <li id="change-temp">
-                <a href="/" id="farenheit">
+              <li className="Change-temp">
+                <a href="/" className="Farenheit">
                   {" "}
                   °F{" "}
                 </a>{" "}
                 |
-                <a href="/" id="celsius">
+                <a href="/" className="Celsius">
                   °C
                 </a>
               </li>
@@ -34,13 +32,14 @@ export default function Current() {
           </div>
         </div>
         <div className="col-6">
-          <ul id="current-details">
-            <li id="current-description">{current.description} 🌥</li>
+          <ul className="current-details">
+            <li className="current-description">{current.description} 🌥</li>
             <li>
-              Humidity <span id="current-humidity">{current.humidity}</span>%
+              Humidity{" "}
+              <span className="current-humidity">{current.humidity}</span>%
             </li>
             <li>
-              Wind <span id="current-wind">{current.wind}mph</span>
+              Wind <span className="current-wind">{current.wind}mph</span>
             </li>
           </ul>
         </div>
