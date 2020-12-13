@@ -1,24 +1,19 @@
 import "./Current.css";
 import WeatherIcon from "./WeatherIcon";
+import TempUnit from "./TempUnit";
 
 export default function Current(props) {
-  let current = {
-    temp: 75,
-    description: "Mostly Cloudy",
-    humidity: 10,
-    wind: "NE 8",
-  };
   return (
     <div className="Current">
       <div className="row current">
         <div className="col-6">
           <div className="current-temp">
             <ul className="current-list">
-              <li>
+              <li className="Current-Icon">
                 <WeatherIcon code={props.data.icon} />
-                <span className="temp-display">{current.temp}°F</span>
               </li>
-              <li className="change-temp">
+              <TempUnit temp={props.data.temperature} />
+              {/* <li className="change-temp">
                 <a href="/" className="farenheit">
                   {" "}
                   °F{" "}
@@ -28,7 +23,7 @@ export default function Current(props) {
                   {" "}
                   °C
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

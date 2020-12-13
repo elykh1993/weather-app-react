@@ -7,12 +7,13 @@
 .Current .current-temp {
   font-size: 55px;
   margin-left: 0px;
+  margin-top: 15px;
   line-height: 60px;
 }
 .Current canvas {
-  height: 60px;
+  height: 70px;
   color: aliceblue;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-right: 15px;
 }
 
@@ -22,7 +23,6 @@
 }
 .Current .change-temp {
   font-size: 16px;
-  margin-left: 80px;
   color: #10375c;
   position: relative;
   bottom: 15px;
@@ -41,4 +41,13 @@
 }
 .Current .current-description {
   text-transform: capitalize;
+}
+
+.TempUnit {
+  max-width: 140px;
+  display: inline-block;
+}
+
+.Current-Icon {
+  float: left;
 }
