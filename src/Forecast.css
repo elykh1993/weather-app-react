@@ -13,4 +13,5 @@
 .WeatherForecast {
   display: flex;
   justify-content: space-evenly;
+  color: #340c69;
 }

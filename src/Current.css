@@ -3,13 +3,13 @@
   margin: 0 auto;
   padding: 0px;
   color: #340c69;
-  font-weight: 500;
 }
 .Current .current-temp {
   font-size: 55px;
   margin-left: 0px;
   margin-top: 15px;
   line-height: 60px;
+  font-weight: 300;
 }
 .Current canvas {
   height: 70px;
@@ -39,6 +39,7 @@
   margin-top: 15px;
   padding-left: 30px;
   text-align: left;
+  font-weight: normal;
 }
 .Current .current-description {
   text-transform: capitalize;
