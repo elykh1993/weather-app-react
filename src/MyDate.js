@@ -1,3 +1,4 @@
+import "./MyDate.css";
 import FormatDate from "./FormatDate";
 
 export default function MyDate(props) {
