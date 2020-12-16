@@ -5,6 +5,12 @@
   position: relative;
   top: 15px;
 }
+
 .Forecast .forecast-icon {
-  height: 65px;
+  height: 30px;
+}
+
+.WeatherForecast {
+  display: flex;
+  justify-content: space-evenly;
 }

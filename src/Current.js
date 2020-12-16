@@ -13,17 +13,6 @@ export default function Current(props) {
                 <WeatherIcon code={props.data.icon} />
               </li>
               <TempUnit temp={props.data.temperature} />
-              {/* <li className="change-temp">
-                <a href="/" className="farenheit">
-                  {" "}
-                  °F{" "}
-                </a>{" "}
-                |
-                <a href="/" className="celsius">
-                  {" "}
-                  °C
-                </a>
-              </li> */}
             </ul>
           </div>
         </div>

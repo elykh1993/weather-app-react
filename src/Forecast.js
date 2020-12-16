@@ -1,70 +1,33 @@
+import axios from "axios";
+import { useState } from "react";
 import "./Forecast.css";
+import ForecastInfo from "./ForecastInfo";
 
-export default function Forecast() {
-  return (
-    <div className="Forecast">
-      <div className="row forecast justify-content-center">
-        <div className="col-2">
-          <h5>Sun</h5>
-          <img
-            className="forecast-icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="sun"
-          />
-          <span className="forecast-temp">
-            <strong>80°</strong>
-            <small>/57°</small>
-          </span>
-        </div>
-        <div className="col-2">
-          <h5>Mon</h5>
-          <img
-            className="forecast-icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="part cloud"
-          />
-          <span className="forecast-temp">
-            <strong>60°</strong>
-            <small>/47°</small>
-          </span>
-        </div>
-        <div className="col-2">
-          <h5>Tues</h5>
-          <img
-            className="forecast-icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/rain_s_sunny.png"
-            alt="sun with rain"
-          />
-          <span className="forecast-temp">
-            <strong>75°</strong>
-            <small>/67°</small>
-          </span>
-        </div>
-        <div className="col-2">
-          <h5>Wed</h5>
-          <img
-            className="forecast-icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="sun"
-          />
-          <span className="forecast-temp">
-            <strong>70°</strong>
-            <small>/59°</small>
-          </span>
-        </div>
-        <div className="col-2">
-          <h5>Thurs</h5>
-          <img
-            className="forecast-icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
-            alt="fog"
-          />
-          <span className="forecast-temp">
-            <strong>67°</strong>
-            <small>/38°</small>
-          </span>
-        </div>
+export default function Forecast(props) {
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
+
+  function handleForecastResponse(response) {
+    setForecast(response.data);
+    setLoaded(true);
+  }
+
+  if (loaded && props.data.city === forecast.city.name) {
+    return (
+      <div className="WeatherForecast row">
+        <ForecastInfo data={forecast.list[0]} />
+        <ForecastInfo data={forecast.list[1]} />
+        <ForecastInfo data={forecast.list[2]} />
+        <ForecastInfo data={forecast.list[3]} />
+        <ForecastInfo data={forecast.list[4]} />
+        <ForecastInfo data={forecast.list[5]} />
       </div>
-    </div>
-  );
+    );
+  } else {
+    let apiKey = "d84865a17de3c843a6890a1fad8ba25a";
+    let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.data.city}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(handleForecastResponse);
+
+    return null;
+  }
 }

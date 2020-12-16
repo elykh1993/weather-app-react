@@ -12,7 +12,6 @@ function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
     //use an object to set multiple states
     setWeatherData({
       ready: true,
@@ -27,7 +26,7 @@ function Weather(props) {
   }
 
   function search() {
-    const apiKey = `35752ea57c3f31dae01153f9ca0e9ecf`;
+    const apiKey = `d84865a17de3c843a6890a1fad8ba25a`;
     let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiURL).then(handleResponse);
   }
@@ -56,9 +55,6 @@ function Weather(props) {
                 />
                 <button type="submit" className="btn btn-primary btn-sm">
                   Search
-                </button>
-                <button type="submit" className="btn btn-primary btn-sm">
-                  Current Location
                 </button>
               </form>
             </div>
