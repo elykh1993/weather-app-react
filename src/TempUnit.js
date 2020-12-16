@@ -8,9 +8,6 @@ export default function TempUnit(props) {
     setTemp(props.temp);
   }, [props.temp]);
 
-  console.log("props: ", props);
-  console.log("temp: ", temp);
-
   function showCelsius(event) {
     event.preventDefault();
     let celsius = Math.round(((props.temp - 32) * 5) / 9);
