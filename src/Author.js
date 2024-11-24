@@ -7,7 +7,7 @@ export default function Author() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/elykh1993/weekly-weather-application/tree/main"
+          href="https://github.com/elykh1993/weather-app-react/tree/master"
         >
           Open-source code{" "}
         </a>
