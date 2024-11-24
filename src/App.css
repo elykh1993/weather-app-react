@@ -4,6 +4,12 @@
   margin: 100px auto;
   border-radius: 10px;
   text-align: center;
-
+.ai-insight {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #D5C1E0;
+    border-radius: 5px;
+    background-color: #F9F9F9; /* رنگ پس‌زمینه روشن */
+}
   background-image: linear-gradient(to top, #E0BBE4 0%, #D5C1E0 50%, #330867 100%);
 }
